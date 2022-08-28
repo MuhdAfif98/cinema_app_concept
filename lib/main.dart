@@ -9,7 +9,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cinema App Concept UI',
       home: MyHomePage(),
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: const Color.fromRGBO(33, 36, 44, 1),
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(33, 36, 44, 1),
-        leading: Icon(Icons.menu),
+        leading: const Icon(Icons.menu),
         actions: const [
           Icon(Icons.search_rounded),
           Icon(Icons.notification_important)
@@ -63,13 +63,13 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Categories",
                   style: TextStyle(color: Colors.white),
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5),
+                      const EdgeInsets.symmetric(vertical: 8.0, ),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: 40,
@@ -121,8 +121,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
-                Row(children: [
+                const SizedBox(height: 15),
+                Row(children: const [
                   Text(
                     "Popular",
                     style: TextStyle(color: Colors.white),
@@ -147,17 +147,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               "https://m.media-amazon.com/images/M/MV5BNTU4YWEzMzMtZGQ0Ny00Y2Q4LTgyZTYtOWVmZjUyZDhjMWYzXkEyXkFqcGdeQXVyMTM0MDY3ODQ3._V1_.jpg",
                               scale: 5,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text("One Piece Film Red",
+                            const Text("One Piece Film Red",
                                 style: TextStyle(
                                   color: Colors.white,
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            RatingBar.readOnly(
+                            const RatingBar.readOnly(
                               filledIcon: Icons.star,
                               emptyIcon: Icons.star_border,
                               initialRating: 4,
@@ -165,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Column(
@@ -174,17 +174,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               "https://m.media-amazon.com/images/M/MV5BNTU4YWEzMzMtZGQ0Ny00Y2Q4LTgyZTYtOWVmZjUyZDhjMWYzXkEyXkFqcGdeQXVyMTM0MDY3ODQ3._V1_.jpg",
                               scale: 5,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text("One Piece Film Red",
-                                style: TextStyle(
+                            const Text("One Piece Film Red",
+                                style: const TextStyle(
                                   color: Colors.white,
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            RatingBar.readOnly(
+                            const RatingBar.readOnly(
                               filledIcon: Icons.star,
                               emptyIcon: Icons.star_border,
                               initialRating: 4,
@@ -192,7 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Column(
@@ -201,17 +201,17 @@ class _MyHomePageState extends State<MyHomePage> {
                               "https://m.media-amazon.com/images/M/MV5BNTU4YWEzMzMtZGQ0Ny00Y2Q4LTgyZTYtOWVmZjUyZDhjMWYzXkEyXkFqcGdeQXVyMTM0MDY3ODQ3._V1_.jpg",
                               scale: 5,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text("One Piece Film Red",
+                            const Text("One Piece Film Red",
                                 style: TextStyle(
                                   color: Colors.white,
                                 )),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            RatingBar.readOnly(
+                            const RatingBar.readOnly(
                               filledIcon: Icons.star,
                               emptyIcon: Icons.star_border,
                               initialRating: 4,
@@ -224,11 +224,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ]),
         ),
       ),
-    bottomNavigationBar: DotNavigationBar(
-      enablePaddingAnimation: false,
-      itemPadding: EdgeInsets.symmetric(horizontal: 20),
-      enableFloatingNavBar: false,
-      backgroundColor: Colors.transparent,
+      bottomNavigationBar: DotNavigationBar(
+        enablePaddingAnimation: false,
+        itemPadding: const EdgeInsets.symmetric(horizontal: 20),
+        enableFloatingNavBar: false,
+        backgroundColor: Colors.transparent,
         currentIndex: _currentIndex,
         onTap: changePage,
         dotIndicatorColor: Colors.transparent,
@@ -259,6 +259,5 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
-    
   }
 }
